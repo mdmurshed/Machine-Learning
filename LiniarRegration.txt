@@ -1,0 +1,17 @@
+x = [1,2,4,5,6]
+y = [5,7,13,14,17]
+alfa = .05
+x1= 0
+x2= 0
+t1 = 0
+t2 = 0
+
+while true
+t1 = x1
+t2 = x2
+h = x1+ x2*x
+x1= x1- alfa*(1/length(x))*sum(h-y)
+x2= x2- alfa*(1/length(x))*sum((h-y)*x')
+if (t1==x1&&t2 == x2) break;
+end
+end
